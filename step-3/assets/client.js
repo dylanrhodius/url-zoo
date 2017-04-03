@@ -11,7 +11,7 @@ function Url(props) {
 function UrlList(props) {
 	return (
 		<ul className="list-group">
-			{props.urls.map(Url)}
+			{props.urls.reverse().map(Url)}
 		</ul>
 	);
 }
