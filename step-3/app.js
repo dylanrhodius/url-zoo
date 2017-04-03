@@ -11,6 +11,10 @@ const urlSchema = new Schema({
 
 const Url = mongoose.model('Url', urlSchema);
 
+//Save the current PORT to use dynamically within the server
+const port = process.env.PORT || 3000;
+const domain = process.env.APP_DOMAIN || 'localhost'
+
 /**
  * Create Express server.
  */
@@ -66,5 +70,5 @@ app.use(function(req, res) {
  * Start server
  */
 const server = app.listen('3000', function() {
-  console.log('Server up and running at port ' + server.address().port)
+  console.log(`Server running on http://${domain}, port ${port}`)
 });

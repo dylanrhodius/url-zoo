@@ -69,7 +69,7 @@ class App extends React.Component {
 	}
 
 	componentWillMount() {
-		fetch('/urls')
+		fetch(`${window.location.origin}/urls`)
 			.then(res => res.json())
 			.then(data => {
 				this.setState({  urls: data });
@@ -80,7 +80,7 @@ class App extends React.Component {
 	 * Add newUrl to store (`this.state`) and re-render
 	 */
 	handleAddUrl(newUrl) {
-		fetch('/urls', {
+		fetch(`${window.location.origin}/urls`, {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
