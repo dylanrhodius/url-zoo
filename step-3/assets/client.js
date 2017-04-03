@@ -16,6 +16,18 @@ function UrlList(props) {
 	);
 }
 
+function genShortURL()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+
 function CreateUrl(props) { // become a shortened URL
 	/*
 	 * - Grabs text values from `creature` and `classification` inputs;
@@ -24,24 +36,20 @@ function CreateUrl(props) { // become a shortened URL
 	 */
 	const submit = () => {
 		const urlInput = document.querySelector('#creature');
-		const classificationInput = document.querySelector('#classification');
+		const shortenedUrl = genShortURL();
 
 		props.onAddMonster({
 			creature: urlInput.value,
-			classification: classificationInput.value
+			classification: shortenedUrl
 		});
 
 		urlInput.value = "";
-		classificationInput.value = "";
 	}
 
 	return (
 		<div style={{display:'flex'}}>
 			<input id="creature" className="form-control"
 				placeholder="Url" />
-
-			<input id="classification" className="form-control"
-				placeholder="Classification" />
 
 			<button className="btn btn-primary" type="button" onClick={submit}>
 				Shorten Url!
