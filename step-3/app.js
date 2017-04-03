@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 const urlSchema = new Schema({
 	creature: { type: String, required: true },
-	classification: String
+	shortUrl: String
 });
 
 const Url = mongoose.model('Url', urlSchema);
