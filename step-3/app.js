@@ -50,15 +50,21 @@ app.get('/urls', (req, res) => {
 });
 
 app.post('/urls', (req, res) => {
-	if (true) {
-		const newUrl = new Url(req.body);
-		newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
-		newUrl.save((err, url) => {
-			if (err) return res.status(500).send(err);
+	// Check to see if the entry sent over already exists in DB
+	Url.count({originalUrl: `${req.body.originalUrl}`}, function (err, count) {
+		// If it doesn't add entry to DB
+		if (count === 0) {
+			// Make a newUrl variable with the body of the request
+			const newUrl = new Url(req.body);
+			// Add domain details to randomly generatedUrl
+			newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
+			newUrl.save((err, url) => {
+				if (err) return res.status(500).send(err);
 
-			res.send(url);
-		});
-	}
+				res.send(url);
+			});
+		}
+	});
 });
 
 /**
