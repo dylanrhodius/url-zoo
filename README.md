@@ -1,3 +1,9 @@
+# Url-shortener
+* App created following [Andrew Hansen's](https://github.com/arahansen) mern-tutorial
+* [Mern-tutorial repo](https://github.com/arahansen/mern-tutorial)
+* [Video walkthrough of tutorial](https://www.youtube.com/watch?v=YAayQekE8po&t=5s)
+
+
 # MERN Tutorial
 The MERN Stack is a set of libraries and frameworks that allow developers to develop full-stack applications using only JavaScript. The stack consists of:
 
