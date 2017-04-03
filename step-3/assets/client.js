@@ -60,7 +60,7 @@ class App extends React.Component {
 	}
 
 	componentWillMount() {
-		fetch('/monsters')
+		fetch('/urls')
 			.then(res => res.json())
 			.then(data => {
 				this.setState({  monsters: data });
@@ -71,7 +71,7 @@ class App extends React.Component {
 	 * Add newMonster to store (`this.state`) and re-render
 	 */
 	handleAddMonster(newMonster) {
-		fetch('/monsters', {
+		fetch('/urls', {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"

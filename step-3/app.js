@@ -37,15 +37,15 @@ try {
 
 app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 days' }));
 
-app.get('/monsters', (req, res) => {
-	Url.find((err, monsters) => {
+app.get('/urls', (req, res) => {
+	Url.find((err, urls) => {
 		if (err) return res.status(500).send(err);
 
-		res.send(monsters);
+		res.send(urls);
 	});
 });
 
-app.post('/monsters', (req, res) => {
+app.post('/urls', (req, res) => {
 	const newMonster = new Url(req.body);
 
 	newMonster.save((err, monster) => {
