@@ -88,9 +88,9 @@ class App extends React.Component {
 			body: JSON.stringify(newMonster)
 		})
 		.then(res => res.json())
-		.then(monster => {
+		.then(url => {
 			this.setState({
-				monsters: this.state.monsters.concat(monster)
+				monsters: this.state.monsters.concat(url)
 			});
 		});
 	}
