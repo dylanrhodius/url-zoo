@@ -38,7 +38,7 @@ function CreateUrl(props) { // become a shortened URL
 		const urlInput = document.querySelector('#creature');
 		const shortenedUrl = genShortURL();
 
-		props.onAddMonster({
+		props.onAddUrl({
 			creature: urlInput.value,
 			classification: shortenedUrl
 		});
@@ -98,7 +98,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<UrlList monsters={this.state.monsters} />
-				<CreateUrl onAddMonster={this.handleAddUrl.bind(this)}/>
+				<CreateUrl onAddUrl={this.handleAddUrl.bind(this)}/>
 			</div>
 		);
 	}
