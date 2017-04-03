@@ -35,7 +35,7 @@ function CreateUrl(props) { // become a shortened URL
 	 * - reset inputs
 	 */
 	const submit = () => {
-		const urlInput = document.querySelector('#creature');
+		const urlInput = document.querySelector('#url');
 		const shortenedUrl = genShortURL();
 
 		props.onAddUrl({
@@ -48,7 +48,7 @@ function CreateUrl(props) { // become a shortened URL
 
 	return (
 		<div style={{display:'flex'}}>
-			<input id="creature" className="form-control"
+			<input id="url" className="form-control"
 				placeholder="Url" />
 
 			<button className="btn btn-primary" type="button" onClick={submit}>
