@@ -1,5 +1,5 @@
 // React components can be simple, pure functions
-function Monster(props) {
+function Url(props) {
 	return (
 		<li className="list-group-item">
 			<h4>{props.creature}</h4>
@@ -11,7 +11,7 @@ function Monster(props) {
 function MonsterList(props) {
 	return (
 		<ul className="list-group">
-			{props.monsters.map(Monster)}
+			{props.monsters.map(Url)}
 		</ul>
 	);
 }
@@ -38,13 +38,13 @@ function CreateMonster(props) { // become Frankenstein
 	return (
 		<div style={{display:'flex'}}>
 			<input id="creature" className="form-control"
-				placeholder="Monster" />
+				placeholder="Url" />
 
 			<input id="classification" className="form-control"
 				placeholder="Classification" />
 
 			<button className="btn btn-primary" type="button" onClick={submit}>
-				Add Monster
+				Shorten Url!
 			</button>
 		</div>
 	);
