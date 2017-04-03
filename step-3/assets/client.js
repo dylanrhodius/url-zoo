@@ -23,15 +23,15 @@ function CreateUrl(props) { // become a shortened URL
 	 * - reset inputs
 	 */
 	const submit = () => {
-		const creatureInput = document.querySelector('#creature');
+		const urlInput = document.querySelector('#creature');
 		const classificationInput = document.querySelector('#classification');
 
 		props.onAddMonster({
-			creature: creatureInput.value,
+			creature: urlInput.value,
 			classification: classificationInput.value
 		});
 
-		creatureInput.value = "";
+		urlInput.value = "";
 		classificationInput.value = "";
 	}
 
