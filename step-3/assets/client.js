@@ -30,13 +30,13 @@ function genShortURL()
 
 function CreateUrl(props) { // become a shortened URL
 	/*
-	 * - Grabs text values from `creature` and `classification` inputs;
+	 * - Grabs text values from `url` input;
 	 * - send values to parent component (<App />)
 	 * - reset inputs
 	 */
 	const submit = () => {
 		const urlInput = document.querySelector('#url');
-		const shortenedUrl = genShortURL();
+		var shortenedUrl = genShortURL();
 
 		props.onAddUrl({
 			creature: urlInput.value,
@@ -44,6 +44,7 @@ function CreateUrl(props) { // become a shortened URL
 		});
 
 		urlInput.value = "";
+		var shortenedUrl = "";
 	}
 
 	return (
