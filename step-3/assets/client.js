@@ -77,15 +77,15 @@ class App extends React.Component {
 	}
 
 	/*
-	 * Add newMonster to store (`this.state`) and re-render
+	 * Add newUrl to store (`this.state`) and re-render
 	 */
-	handleAddUrl(newMonster) {
+	handleAddUrl(newUrl) {
 		fetch('/urls', {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(newMonster)
+			body: JSON.stringify(newUrl)
 		})
 		.then(res => res.json())
 		.then(url => {
