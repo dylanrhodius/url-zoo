@@ -16,7 +16,7 @@ function UrlList(props) {
 	);
 }
 
-function CreateMonster(props) { // become Frankenstein
+function CreateUrl(props) { // become Frankenstein
 	/*
 	 * - Grabs text values from `creature` and `classification` inputs;
 	 * - send values to parent component (<App />)
@@ -90,7 +90,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<UrlList monsters={this.state.monsters} />
-				<CreateMonster onAddMonster={this.handleAddMonster.bind(this)}/>
+				<CreateUrl onAddMonster={this.handleAddMonster.bind(this)}/>
 			</div>
 		);
 	}
