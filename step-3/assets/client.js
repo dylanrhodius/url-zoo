@@ -16,7 +16,7 @@ function UrlList(props) {
 	);
 }
 
-function CreateUrl(props) { // become Frankenstein
+function CreateUrl(props) { // become a shortened URL
 	/*
 	 * - Grabs text values from `creature` and `classification` inputs;
 	 * - send values to parent component (<App />)
@@ -70,7 +70,7 @@ class App extends React.Component {
 	/*
 	 * Add newMonster to store (`this.state`) and re-render
 	 */
-	handleAddMonster(newMonster) {
+	handleAddUrl(newMonster) {
 		fetch('/urls', {
 			method: 'POST',
 			headers: {
@@ -90,7 +90,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<UrlList monsters={this.state.monsters} />
-				<CreateUrl onAddMonster={this.handleAddMonster.bind(this)}/>
+				<CreateUrl onAddMonster={this.handleAddUrl.bind(this)}/>
 			</div>
 		);
 	}
