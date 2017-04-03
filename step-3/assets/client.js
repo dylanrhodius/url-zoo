@@ -78,19 +78,23 @@ class App extends React.Component {
 	 * Add newUrl to store (`this.state`) and re-render
 	 */
 	handleAddUrl(newUrl) {
-		fetch(`${window.location.origin}/urls`, {
-			method: 'POST',
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(newUrl)
-		})
-		.then(res => res.json())
-		.then(url => {
-			this.setState({
-				urls: this.state.urls.concat(url)
+		if (true) {
+
+			fetch(`${window.location.origin}/urls`, {
+				method: 'POST',
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(newUrl)
+			})
+			.then(res => res.json())
+			.then(url => {
+				this.setState({
+					urls: this.state.urls.concat(url)
+				});
 			});
-		});
+
+		}
 	}
 
 	render() {
