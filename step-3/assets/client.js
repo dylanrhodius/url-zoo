@@ -8,7 +8,7 @@ function Url(props) {
 	);
 }
 
-function MonsterList(props) {
+function UrlList(props) {
 	return (
 		<ul className="list-group">
 			{props.monsters.map(Url)}
@@ -89,7 +89,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<MonsterList monsters={this.state.monsters} />
+				<UrlList monsters={this.state.monsters} />
 				<CreateMonster onAddMonster={this.handleAddMonster.bind(this)}/>
 			</div>
 		);
