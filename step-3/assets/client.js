@@ -11,7 +11,7 @@ function Url(props) {
 function UrlList(props) {
 	return (
 		<ul className="list-group">
-			{props.monsters.map(Url)}
+			{props.urls.map(Url)}
 		</ul>
 	);
 }
@@ -64,7 +64,7 @@ class App extends React.Component {
 		super();
 
 		this.state = {
-			monsters: []
+			urls: []
 		};
 	}
 
@@ -72,7 +72,7 @@ class App extends React.Component {
 		fetch('/urls')
 			.then(res => res.json())
 			.then(data => {
-				this.setState({  monsters: data });
+				this.setState({  urls: data });
 			})
 	}
 
@@ -90,7 +90,7 @@ class App extends React.Component {
 		.then(res => res.json())
 		.then(url => {
 			this.setState({
-				monsters: this.state.monsters.concat(url)
+				urls: this.state.urls.concat(url)
 			});
 		});
 	}
@@ -98,7 +98,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<UrlList monsters={this.state.monsters} />
+				<UrlList urls={this.state.urls} />
 				<CreateUrl onAddUrl={this.handleAddUrl.bind(this)}/>
 			</div>
 		);
