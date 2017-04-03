@@ -51,7 +51,7 @@ app.get('/urls', (req, res) => {
 
 app.post('/urls', (req, res) => {
 	const newUrl = new Url(req.body);
-
+	newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
 	newUrl.save((err, url) => {
 		if (err) return res.status(500).send(err);
 
