@@ -48,10 +48,10 @@ app.get('/urls', (req, res) => {
 app.post('/urls', (req, res) => {
 	const newMonster = new Url(req.body);
 
-	newMonster.save((err, monster) => {
+	newMonster.save((err, url) => {
 		if (err) return res.status(500).send(err);
 
-		res.send(monster);
+		res.send(url);
 	});
 });
 
