@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const path = require('path');
 const Schema = mongoose.Schema;
 
-const monsterSchema = new Schema({
+const urlSchema = new Schema({
 	creature: { type: String, required: true },
 	classification: String
 });
 
-const Monster = mongoose.model('Monster', monsterSchema);
+const Url = mongoose.model('Url', urlSchema);
 
 /**
  * Create Express server.
@@ -38,7 +38,7 @@ try {
 app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 days' }));
 
 app.get('/monsters', (req, res) => {
-	Monster.find((err, monsters) => {
+	Url.find((err, monsters) => {
 		if (err) return res.status(500).send(err);
 
 		res.send(monsters);
@@ -46,7 +46,7 @@ app.get('/monsters', (req, res) => {
 });
 
 app.post('/monsters', (req, res) => {
-	const newMonster = new Monster(req.body);
+	const newMonster = new Url(req.body);
 
 	newMonster.save((err, monster) => {
 		if (err) return res.status(500).send(err);
@@ -65,6 +65,6 @@ app.use(function(req, res) {
 /**
  * Start server
  */
-const server = app.listen('8080', function() {
+const server = app.listen('3000', function() {
   console.log('Server up and running at port ' + server.address().port)
 });
