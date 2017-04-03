@@ -2,7 +2,7 @@
 function Url(props) {
 	return (
 		<li className="list-group-item">
-			<h4>{props.creature}</h4>
+			<h4>{props.originalUrl}</h4>
 			<p>{props.shortUrl}</p>
 		</li>
 	);
@@ -39,7 +39,7 @@ function CreateUrl(props) { // become a shortened URL
 		var shortenedUrl = genShortURL();
 
 		props.onAddUrl({
-			creature: urlInput.value,
+			originalUrl: urlInput.value,
 			shortUrl: shortenedUrl
 		});
 

@@ -5,7 +5,7 @@ const path = require('path');
 const Schema = mongoose.Schema;
 
 const urlSchema = new Schema({
-	creature: { type: String, required: true },
+	originalUrl: { type: String, required: true },
 	shortUrl: String
 });
 
