@@ -44,11 +44,34 @@ app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 d
 app.get('/urls', (req, res) => {
 	Url.find((err, urls) => {
 		if (err) return res.status(500).send(err);
-
+//
 		res.send(urls);
 	});
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.sendStatus(204);
+});
+
+//Redirecting from shortUrl address to database's originalUrl
+app.get('/:shortUrl', (req, res) => {
+	console.log("get /shortUrl")
+  let url = "http://"+domain+"/" + req.params.shortUrl +"/"
+	console.log(url);
+	Url.find( { shortUrl: url }, function(err, entries) {
+		if(err) {
+			res.status(404).json({"error": "not found", "err":err});
+			return;
+		} else {
+			console.log(entries);
+			console.log(entries[0].originalUrl);
+			res.redirect(`${entries[0].originalUrl}`)
+
+		}
+	});
+});
+
+// Creating new entries
 app.post('/urls', (req, res) => {
 	// Check to see if the entry sent over already exists in DB
 	Url.count({originalUrl: `${req.body.originalUrl}`}, function (err, count) {
