@@ -78,7 +78,13 @@ class App extends React.Component {
 	 * Add newUrl to store (`this.state`) and re-render
 	 */
 	handleAddUrl(newUrl) {
-		if (true) {
+
+		function isUrl(url) {
+			var regexp = /^(ftp|http|https):\/\/[^ "]+$/;
+			return regexp.test(url);
+		}
+
+		if (isUrl(newUrl.originalUrl) === true) {
 
 			fetch(`${window.location.origin}/urls`, {
 				method: 'POST',
