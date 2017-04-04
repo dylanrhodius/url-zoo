@@ -3,7 +3,7 @@ function Url(props) {
 	return (
 		<li className="list-group-item">
 			<h4>{props.originalUrl}</h4>
-			<p>{props.shortUrl}</p>
+			<a href={'' + props.originalUrl}>{props.shortUrl}</a>
 		</li>
 	);
 }
