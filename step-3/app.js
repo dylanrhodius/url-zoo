@@ -55,18 +55,16 @@ app.get('/favicon.ico', function(req, res) {
 
 //Redirecting from shortUrl address to database's originalUrl
 app.get('/:shortUrl', (req, res) => {
-	console.log("get /shortUrl")
-  let url = "http://"+domain+"/" + req.params.shortUrl +"/"
-	console.log(url);
+	// Set url to a full web address with the shortUrl
+  let url = "http://"+domain+":"+port+"/"+req.params.shortUrl+"/"
+	// Find url variable in database
 	Url.find( { shortUrl: url }, function(err, entries) {
 		if(err) {
 			res.status(404).json({"error": "not found", "err":err});
 			return;
 		} else {
-			console.log(entries);
-			console.log(entries[0].originalUrl);
+			// If found, redirect to its originalUrl address
 			res.redirect(`${entries[0].originalUrl}`)
-
 		}
 	});
 });
@@ -80,7 +78,7 @@ app.post('/urls', (req, res) => {
 			// Make a newUrl variable with the body of the request
 			const newUrl = new Url(req.body);
 			// Add domain details to randomly generatedUrl
-			newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
+			newUrl.shortUrl = "http://"+domain+":"+port+"/"+`${newUrl.shortUrl}`+"/"
 			newUrl.save((err, url) => {
 				if (err) return res.status(500).send(err);
 
