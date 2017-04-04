@@ -52,7 +52,7 @@ app.get('/urls', (req, res) => {
 app.post('/urls', (req, res) => {
 	// Check to see if the entry sent over already exists in DB
 	Url.count({originalUrl: `${req.body.originalUrl}`}, function (err, count) {
-		// If it doesn't add entry to DB
+		// If it doesn't exist count should be 0, so add entry to DB
 		if (count === 0) {
 			// Make a newUrl variable with the body of the request
 			const newUrl = new Url(req.body);
