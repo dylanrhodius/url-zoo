@@ -13,7 +13,7 @@ const Url = mongoose.model('Url', urlSchema);
 
 //Save the current PORT to use dynamically within the server
 const domain = process.env.APP_DOMAIN || 'localhost'
-const mongoUrl = process.env.MONGO_URL
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/mern_tutorial'
 
 /**
  * Create Express server.
@@ -40,7 +40,7 @@ try {
 	process.exit(1);
 }
 
-app.use('/assets', express.static(path.resolve('step-3/assets'), { maxAge: '30 days' }));
+app.use('/src', express.static(path.resolve('step-3/src'), { maxAge: '30 days' }));
 
 app.get('/urls', (req, res) => {
 	Url.find((err, urls) => {

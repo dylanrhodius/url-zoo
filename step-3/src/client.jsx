@@ -108,8 +108,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<UrlList urls={this.state.urls} />
 				<CreateUrl onAddUrl={this.handleAddUrl.bind(this)}/>
+				<UrlList urls={this.state.urls} />
 			</div>
 		);
 	}
@@ -117,5 +117,5 @@ class App extends React.Component {
 
 ReactDOM.render(
 	<App />,
-	document.getElementById('example')
+	document.getElementById('main')
 );
