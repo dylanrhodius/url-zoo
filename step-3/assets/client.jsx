@@ -79,11 +79,13 @@ class App extends React.Component {
 	 */
 	handleAddUrl(newUrl) {
 
+		// Some degree of URL validation, not perfect.
 		function isUrl(url) {
 			var regexp = /^(ftp|http|https):\/\/[^ "]+$/;
 			return regexp.test(url);
 		}
 
+		// If the validation criteria is met, POST request is sent.
 		if (isUrl(newUrl.originalUrl) === true) {
 
 			fetch(`${window.location.origin}/urls`, {
