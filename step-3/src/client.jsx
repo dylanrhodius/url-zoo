@@ -108,7 +108,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<img src="../public/MainLogo.png" alt="main logo"></img>
+				// <img src="../public/main-logo.png" className='mr-3' alt="main-logo-2"></img>
+				// <img src="../public/main-logo.png" alt="main logo"/>
 				<CreateUrl onAddUrl={this.handleAddUrl.bind(this)}/>
 				<UrlList urls={this.state.urls} />
 			</div>
