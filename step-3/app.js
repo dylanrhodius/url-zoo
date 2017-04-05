@@ -79,7 +79,7 @@ app.post('/urls', (req, res) => {
 			// Make a newUrl variable with the body of the request
 			const newUrl = new Url(req.body);
 			// Add domain details to randomly generatedUrl
-			newUrl.shortUrl = "http://"+domain+":"+port+"/"+`${newUrl.shortUrl}`+"/"
+			newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
 			newUrl.save((err, url) => {
 				if (err) return res.status(500).send(err);
 
