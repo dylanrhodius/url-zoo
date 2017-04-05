@@ -32,7 +32,7 @@ app.use(bodyParser.json());
  */
 mongoose.Promise = global.Promise;
 try {
-	mongoose.connect('mongodb://localhost/mern_tutorial');
+	mongoose.connect('mongodb://dylanrhodius:thepasswordisZoo@ds153400.mlab.com:53400/urlzoo');
 	console.log('connected to mongoDB');
 } catch (e) {
 	console.log('ERROR: could not connect to mongoDB. Is it running? (use `mongod`)');
