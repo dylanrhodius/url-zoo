@@ -19,6 +19,7 @@ const domain = process.env.APP_DOMAIN || 'localhost'
  * Create Express server.
  */
 const app = express();
+app.set('port', (process.env.PORT || 3000));
 
 /**
  * Register Express middleware
@@ -98,6 +99,6 @@ app.use(function(req, res) {
 /**
  * Start server
  */
-const server = app.listen('3000', function() {
-  console.log(`Server running on http://${domain}, port ${port}`)
-});
+ app.listen(app.get('port'), function() {
+   console.log('Node app is running on port', app.get('port'));
+ });
