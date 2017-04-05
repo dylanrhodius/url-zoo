@@ -11,8 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start:step-2": "NODE_PATH=. node step-2/app.js",
-    "start:step-3": "NODE_PATH=. node step-3/app.js"
+    "start": "NODE_PATH=. node step-3/app.js"
   },
   "author": "",
   "license": "ISC"
