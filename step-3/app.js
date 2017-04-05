@@ -57,7 +57,7 @@ app.get('/favicon.ico', function(req, res) {
 //Redirecting from shortUrl address to database's originalUrl
 app.get('/:shortUrl', (req, res) => {
 	// Set url to a full web address with the shortUrl
-  let url = "http://"+domain+":"+port+"/"+req.params.shortUrl+"/"
+  let url = "http://"+domain+"/"+req.params.shortUrl+"/"
 	// Find url variable in database
 	Url.find( { shortUrl: url }, function(err, entries) {
 		if(err) {
