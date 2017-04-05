@@ -12,8 +12,8 @@ const urlSchema = new Schema({
 const Url = mongoose.model('Url', urlSchema);
 
 //Save the current PORT to use dynamically within the server
-const port = process.env.PORT || 3000;
 const domain = process.env.APP_DOMAIN || 'localhost'
+const mongoUrl = process.env.MONGO_URL
 
 /**
  * Create Express server.
@@ -33,7 +33,7 @@ app.use(bodyParser.json());
  */
 mongoose.Promise = global.Promise;
 try {
-	mongoose.connect('mongodb://dylanrhodius:thepasswordisZoo@ds153400.mlab.com:53400/urlzoo');
+	mongoose.connect(mongoUrl);
 	console.log('connected to mongoDB');
 } catch (e) {
 	console.log('ERROR: could not connect to mongoDB. Is it running? (use `mongod`)');
