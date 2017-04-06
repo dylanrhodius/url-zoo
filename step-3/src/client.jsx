@@ -11,7 +11,7 @@ function Url(props) {
 function UrlList(props) {
 	return (
 		<ul className="list-group">
-			{props.urls.reverse().map(Url)}
+			{props.urls.reverse().slice(0-5).map(Url)}
 		</ul>
 	);
 }
@@ -108,7 +108,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Simplify your links.</h1>
 				<CreateUrl onAddUrl={this.handleAddUrl.bind(this)}/>
 				<UrlList urls={this.state.urls} />
 			</div>
