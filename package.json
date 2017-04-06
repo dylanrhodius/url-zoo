@@ -19,7 +19,8 @@
     "react-test-renderer": "^15.4.2"
   },
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel-node.js --presets node6 ./app.js"
+    "start": "./node_modules/babel-cli/bin/babel-node.js --presets node6 ./app.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC"
