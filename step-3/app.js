@@ -111,7 +111,5 @@ var verbs = require('./src/verbs').VERBS;
  * Start server
  */
  app.listen(app.get('port'), function() {
-   console.log('Node app is running on port', app.get('port'));
-	 var generatedUrl = verbs.verbs[Math.floor(Math.random()*verbs.verbs.length)]+animals.animals[Math.floor(Math.random()*animals.animals.length)];
-	 console.log(generatedUrl);
+	 console.info(`Server running on http://${domain}:${process.env.PORT});
  });
