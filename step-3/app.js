@@ -79,7 +79,7 @@ app.post('/urls', (req, res) => {
 			// Make a newUrl variable with the body of the request
 			const newUrl = new Url(req.body);
 			// Add domain details to randomly generatedUrl
-			newUrl.shortUrl = "http://"+domain+"/"+`${newUrl.shortUrl}`+"/"
+			newUrl.shortUrl = "http://"+domain+"/"+genShortUrl()+"/"
 			newUrl.save((err, url) => {
 				if (err) return res.status(500).send(err);
 
@@ -89,16 +89,29 @@ app.post('/urls', (req, res) => {
 	});
 });
 
+// Create random verb + animals
+function genShortUrl()
+{
+		var generatedUrl = verbs.verbs[Math.floor(Math.random()*verbs.verbs.length)]+animals.animals[Math.floor(Math.random()*animals.animals.length)]
+    return generatedUrl;
+}
+
 /**
  * default route: send html
  */
 app.use(function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+var animals = require('./src/animals').ANIMALS;
+var verbs = require('./src/verbs').VERBS;
+
+
 
 /**
  * Start server
  */
  app.listen(app.get('port'), function() {
    console.log('Node app is running on port', app.get('port'));
+	 var generatedUrl = verbs.verbs[Math.floor(Math.random()*verbs.verbs.length)]+animals.animals[Math.floor(Math.random()*animals.animals.length)];
+	 console.log(generatedUrl);
  });
