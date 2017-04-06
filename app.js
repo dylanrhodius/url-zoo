@@ -15,7 +15,7 @@ const Url = mongoose.model('Url', urlSchema);
 
 //Save the current PORT to use dynamically within the server
 const domain = process.env.APP_DOMAIN || 'localhost'
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/mern_tutorial'
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/urlzoo_test'
 
 /**
  * Create Express server.
