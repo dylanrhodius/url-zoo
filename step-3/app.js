@@ -111,5 +111,5 @@ var verbs = require('./src/verbs').VERBS;
  * Start server
  */
  app.listen(app.get('port'), function() {
-	 console.info(`Server running on http://${domain}:${process.env.PORT});
+	 console.info(`Server running on http://${domain}:${process.env.PORT}`);
  });
