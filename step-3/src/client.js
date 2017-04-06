@@ -16,16 +16,6 @@ function UrlList(props) {
 	);
 }
 
-function genShortUrl()
-{
-    var generatedUrl = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for( var i=0; i < 5; i++ )
-        generatedUrl += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return generatedUrl;
-}
-
 function CreateUrl(props) { // become a shortened URL
 	/*
 	 * - Grabs text values from `url` input;
@@ -34,7 +24,7 @@ function CreateUrl(props) { // become a shortened URL
 	 */
 	const submit = () => {
 		const urlInput = document.querySelector('#url');
-		var shortenedUrl = genShortUrl();
+		var shortenedUrl = ""
 
 		props.onAddUrl({
 			originalUrl: urlInput.value,
