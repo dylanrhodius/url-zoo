@@ -40,7 +40,7 @@ try {
 	process.exit(1);
 }
 
-app.use('/src', express.static(path.resolve('/src'), { maxAge: '30 days' }));
+app.use('/src', express.static(path.resolve('step-3/src'), { maxAge: '30 days' }));
 
 app.get('/urls', (req, res) => {
 	Url.find((err, urls) => {
@@ -112,4 +112,6 @@ var verbs = require('./src/verbs').VERBS;
  */
  app.listen(app.get('port'), function() {
    console.log('Node app is running on port', app.get('port'));
+	 var generatedUrl = verbs.verbs[Math.floor(Math.random()*verbs.verbs.length)]+animals.animals[Math.floor(Math.random()*animals.animals.length)];
+	 console.log(generatedUrl);
  });
