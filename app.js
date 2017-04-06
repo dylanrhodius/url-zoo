@@ -40,7 +40,7 @@ try {
 	process.exit(1);
 }
 
-app.use('/src', express.static(path.resolve('step-3/src'), { maxAge: '30 days' }));
+app.use('/src', express.static(path.resolve('/src'), { maxAge: '30 days' }));
 
 app.get('/urls', (req, res) => {
 	Url.find((err, urls) => {

@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel-node.js --presets node6 step-3/app.js"
+    "start": "./node_modules/babel-cli/bin/babel-node.js --presets node6 app.js"
   },
   "author": "",
   "license": "ISC"
