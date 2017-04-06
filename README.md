@@ -1,5 +1,5 @@
 # URL Zoo
-URL Zoo is a web app that makes URLs simple. What is unique about URL Zoo is the way in which it simplifies URLs for the user. It grabs a random **verb** and **animal** from an array and pairs it together, creating a simple url which is easy to remember! (E.g. SmokingPanda)
+URL Zoo is a web app that makes URLs simple. What is unique about URL Zoo is the way in which it simplifies URLs for the user. It grabs a random **verb** and **animal** from an array and pairs them together, creating a simple url which is easy to remember! (E.g. SmokingPanda)
 Click here for the [live demo](https://urlzoo.herokuapp.com/).
 
 ### Installation
@@ -32,6 +32,11 @@ URL Zoo was built using the universal Javascript approach and employs Javascript
 * [**React:**](https://facebook.github.io/react/) a declarative, efficient, and flexible JavaScript library for building user interfaces.
 * [**Node.js:**](https://nodejs.org/en/) an open-source, cross-platform JavaScript runtime environment.
 * [**Bootstrap:**](http://getbootstrap.com/) a front-end web framework for designing websites.
+
+### Screenshots
+
+**Mainpage with links added**
+![p1](http://i.imgur.com/mWOIajj.png)
 
 ### Future improvements
 
