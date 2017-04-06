@@ -19,6 +19,7 @@ html, body {
 }
 
 #main{
+  margin-top: 20px;
   position: fixed;
   width: 600px;
   height: 300px;
