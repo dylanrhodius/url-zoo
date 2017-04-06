@@ -51,7 +51,7 @@ function CreateUrl(props) { // become a shortened URL
 				placeholder="Url" />
 
 			<button className="btn btn-primary" type="button" onClick={submit}>
-				Shorten Url!
+				Simplify Link
 			</button>
 		</div>
 	);
