@@ -19,11 +19,11 @@ html, body {
 }
 
 #main{
-  margin-top: 20px;
+  margin-top: 15px;
   position: fixed;
   width: 600px;
   height: 300px;
-  left: 31.5%;
+  left: 30%;
   top: 25%;
 }
 
