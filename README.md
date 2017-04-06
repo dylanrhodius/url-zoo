@@ -1,6 +1,6 @@
 # URL Zoo
 URL Zoo is a web app that makes URLs simple. What is unique about URL Zoo is the way in which it simplifies URLs. It randomly chooses a **verb** and **animal** from an array and pairs them together, creating a simple url which is easy to remember! (E.g. SmokingPanda)
-Checkout the [live demo here!](https://urlzoo.herokuapp.com/).
+Checkout the [live demo here!](https://urlzoo.herokuapp.com/)
 
 ### Installation
 
