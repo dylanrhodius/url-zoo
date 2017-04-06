@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 const Schema = mongoose.Schema;
+import dotenv from 'dotenv';
+dotenv.config();
 
 const urlSchema = new Schema({
 	originalUrl: { type: String, required: true },
