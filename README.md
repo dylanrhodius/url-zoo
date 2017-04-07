@@ -78,7 +78,7 @@ Testing:
 
 ### Future improvements
 
-* The app is still not fully responsive, and needs a front-end overhaul.
+* Make the web app responsive.
 * Change incorrect URL error message from a standard alert to a Bootstrap alert, or something fancier.
 * Offer individual statistics about each link: track number of times visited, date added, time and date visited, etc.
 
