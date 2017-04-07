@@ -1,6 +1,38 @@
 # URL Zoo
 URL Zoo is a web app that makes URLs simple. What is unique about URL Zoo is the way in which it simplifies URLs. It randomly chooses a **verb** and **animal** from an array and pairs them together, creating a simple url which is easy to remember! (E.g. SmokingPanda)
-Checkout the [live demo here!](https://urlzoo.herokuapp.com/)
+Checkout the [live demo here!](https://urlzoo.herokuapp.com/) Please note that the app was done with a Google Chrome browser as reference, so it might not work as intended on other browsers.
+
+### User Stories
+```
+As a user:
+I would like to be able to shorten my links,
+So that they are easier to manage.
+```
+```
+As a user:
+I would like my links to be actual words rather than alphanumerical terms,
+So that they are easier to remember.
+```
+```
+As a user:
+I would like to only be able to input valid links,
+So that I don't store links that won't work.
+```
+```
+As a user:
+I would like my links to be stored in a persistant database,
+So that I can access them later.
+```
+```
+As a user:
+I would like to only store unique links,
+So that I don't create duplicate entries.
+```
+```
+As a user:
+I would like the short links to redirect me to their original links,
+So that I can use the simpler version of each link.
+```
 
 ### Installation
 
@@ -42,7 +74,7 @@ Testing:
 ### Screenshots
 
 **Mainpage with links added**
-![p1](http://i.imgur.com/mWOIajj.png)
+![p1](http://i.imgur.com/KQVADGJ.png)
 
 ### Future improvements
 
