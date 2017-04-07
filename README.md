@@ -25,6 +25,11 @@ So that I can access them later.
 ```
 ```
 As a user:
+I would like to see my links in reverse chronological order,
+So that I can access the latest created link easier.
+```
+```
+As a user:
 I would like to only store unique links,
 So that I don't create duplicate entries.
 ```
