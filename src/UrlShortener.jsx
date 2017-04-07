@@ -47,6 +47,8 @@ function CreateUrl(props) { // become a shortened URL
 	);
 }
 
+// The component that will get rendered
+
 class UrlShortener extends React.Component {
 	constructor() {
 		super();
@@ -91,7 +93,7 @@ class UrlShortener extends React.Component {
 					urls: this.state.urls.concat(url)
 				});
 			});
-
+			
 		} else {
 			alert("That seems like a wrong URL.. Make sure your input includes http://");
 		}
