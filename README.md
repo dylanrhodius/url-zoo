@@ -34,6 +34,11 @@ URL Zoo was built using the universal Javascript approach and employs Javascript
 * [**Node.js:**](https://nodejs.org/en/) an open-source, cross-platform JavaScript runtime environment.
 * [**Bootstrap:**](http://getbootstrap.com/) a front-end web framework for designing websites.
 
+Testing:
+* [**Jest:**](https://facebook.github.io/jest/) a JavaScript Testing utility for testing React.
+* [**Enzyme:**](http://airbnb.io/enzyme/) a JavaScript Testing utility for testing React.
+* [**Chai:**](http://chaijs.com/) a unit testing library.
+
 ### Screenshots
 
 **Mainpage with links added**

@@ -13,8 +13,7 @@
     "express": "^4.14.0",
     "mongoose": "^4.6.5",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "sinon": "^2.1.0"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
