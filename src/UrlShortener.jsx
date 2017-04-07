@@ -2,7 +2,7 @@
 function Url(props) {
 	return (
 		<li className="list-group-item">
-			<h4>{props.originalUrl}</h4>
+			<p>{props.originalUrl}</p>
 			<a href={'' + props.shortUrl}>{props.shortUrl}</a>
 		</li>
 	);
@@ -93,7 +93,7 @@ class UrlShortener extends React.Component {
 					urls: this.state.urls.concat(url)
 				});
 			});
-			
+
 		} else {
 			alert("That seems like a wrong URL.. Make sure your input includes http://");
 		}
