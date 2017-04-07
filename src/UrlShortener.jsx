@@ -92,6 +92,8 @@ class UrlShortener extends React.Component {
 				});
 			});
 
+		} else {
+			alert("That seems like a wrong URL.. Make sure your input includes http://");
 		}
 	}
 
