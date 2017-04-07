@@ -19,7 +19,7 @@ function UrlList(props) {
 function CreateUrl(props) { // become a shortened URL
 	/*
 	 * - Grabs text values from `url` input;
-	 * - send values to parent component (<App />)
+	 * - send values to parent component (<UrlShortener />)
 	 * - reset inputs
 	 */
 	const submit = () => {
@@ -47,7 +47,7 @@ function CreateUrl(props) { // become a shortened URL
 	);
 }
 
-class App extends React.Component {
+class UrlShortener extends React.Component {
 	constructor() {
 		super();
 
@@ -106,6 +106,6 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-	<App />,
+	<UrlShortener />,
 	document.getElementById('main')
 );
