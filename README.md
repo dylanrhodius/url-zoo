@@ -85,6 +85,6 @@ Testing:
 
 ### Credits
 
-This app was created following [Andrew Hansen's](https://github.com/arahansen) mern-tutorial.
+This app was created following [Andrew Hansen's](https://github.com/arahansen) "spooky monsters" mern-tutorial.
 * [Mern-tutorial repo](https://github.com/arahansen/mern-tutorial)
 * [Video walkthrough of tutorial](https://www.youtube.com/watch?v=YAayQekE8po&t=5s)
